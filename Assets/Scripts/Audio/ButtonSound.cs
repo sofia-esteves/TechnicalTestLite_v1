@@ -21,12 +21,15 @@ public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerDownHand
     // Start is called before the first frame update
     void Start()
     {
-        audioManager = AudioManager.GetComponent<AudioManager>();
+        audioManager = GameObject.FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //void Update()
+    //{
+    //    if (audioManager == null)
+    //    {
+    //        audioManager = GameObject.FindObjectOfType<AudioManager>();
+    //    }
+    //}
 }

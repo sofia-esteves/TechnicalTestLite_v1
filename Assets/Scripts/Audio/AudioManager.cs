@@ -7,14 +7,26 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] Sounds;
+    public static AudioManager instance;
     private void Awake()
     {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+        DontDestroyOnLoad(gameObject);
+
         foreach(Sound s in Sounds)
         {
             s.AudioSource = gameObject.AddComponent<AudioSource>();
             s.AudioSource.clip = s.Clip;
             s.AudioSource.volume = s.Volume;
             s.AudioSource.pitch = s.Pitch;
+            s.AudioSource.loop = s.Loop;
         }
     }
 
