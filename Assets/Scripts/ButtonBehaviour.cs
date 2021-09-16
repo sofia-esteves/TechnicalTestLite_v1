@@ -20,7 +20,6 @@ namespace Assets.Scripts
         public void OnBeginDrag(PointerEventData eventData)
         {
             puzzlePiecesContent = transform.parent;
-            transform.SetParent(transform.parent.parent);
 
             GetComponent<CanvasGroup>().blocksRaycasts = false;
         }
@@ -32,6 +31,7 @@ namespace Assets.Scripts
 
         public void OnEndDrag(PointerEventData eventData)
         {
+            
             //transform.SetParent(puzzlePiecesContent);
             GetComponent<CanvasGroup>().blocksRaycasts = true;
 
