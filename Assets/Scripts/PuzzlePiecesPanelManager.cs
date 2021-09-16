@@ -6,6 +6,9 @@ namespace Assets.Scripts
 {
     public class PuzzlePiecesPanelManager : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
     {
+        [SerializeField]
+        private GameObject prefab;
+
         public void OnDrop(PointerEventData eventData)
         {
 

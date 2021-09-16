@@ -74,8 +74,8 @@ public class GridBehaviour : MonoBehaviour
                 tileInstance.name = $"TileInstance ({x},{y})";
                 if (isPuzzlePieceSlot)
                 {
-                    var slot = tileInstance.AddComponent<Image>();
-                    slot.sprite = _sprite;
+                    //var slot = tileInstance.AddComponent<Image>();
+                    //slot.sprite = _sprite;
                 }
                 var instanceRectTransform = tileInstance.GetComponent<RectTransform>();
                 instanceRectTransform.anchoredPosition3D = new Vector3(x*150-_width*56.5f, y*150-_height*10);
