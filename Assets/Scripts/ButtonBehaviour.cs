@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
     public class ButtonBehaviour : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
-        Transform puzzlePiecesContent = null;
+        Transform parentTransform = null;
         public void OnPointerDown(PointerEventData eventData)
         {
             
@@ -19,8 +20,8 @@ namespace Assets.Scripts
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            puzzlePiecesContent = transform.parent;
-
+            parentTransform = transform.parent;
+            transform.SetParent(parentTransform.parent);
             GetComponent<CanvasGroup>().blocksRaycasts = false;
         }
 
@@ -31,8 +32,11 @@ namespace Assets.Scripts
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            
-            //transform.SetParent(puzzlePiecesContent);
+
+            if(transform.parent == parentTransform.parent)
+            {
+                transform.SetParent(parentTransform);
+            }
             GetComponent<CanvasGroup>().blocksRaycasts = true;
 
         }

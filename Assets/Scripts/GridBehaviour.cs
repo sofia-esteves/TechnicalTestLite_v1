@@ -16,17 +16,20 @@ public class GridBehaviour : MonoBehaviour
     [SerializeField]
     private GameObject _tilePrefab;
     public List<GameObject> TilesList;
-
-
+    public List<GameObject> PuzzleTilesList;
+    public List<(int, int)> PuzzleSlots = new List<(int, int)>();
+    public GameObject Pieces;
+    public GameObject WinMenu;
     private void Start()
     {
         GenerateGrid();
+        Pieces.SetActive(true);
     }
     void GenerateGrid()
     {
         var totalOfTiles = _width * _height;
         var numberOfPuzzleSlots = (int)totalOfTiles / 3;
-        List<(int, int)> PuzzleSlots = new List<(int,int)>();
+       
         while (PuzzleSlots.Count < numberOfPuzzleSlots)
         {
             var randomX = new System.Random();
@@ -72,15 +75,38 @@ public class GridBehaviour : MonoBehaviour
 
                 var tileInstance = Instantiate(_tilePrefab, new Vector3(x, y), Quaternion.identity, _tilesContent.transform);
                 tileInstance.name = $"TileInstance ({x},{y})";
+                var tileBehaviour = tileInstance.GetComponent<TileBehaviour>();
+                tileBehaviour.X = x;
+                tileBehaviour.Y = y;
+
                 if (isPuzzlePieceSlot)
                 {
-                    //var slot = tileInstance.AddComponent<Image>();
-                    //slot.sprite = _sprite;
+                    var slot = tileInstance.AddComponent<Image>();
+                    var pink = new Color(255, 181, 224);
+                    pink.a = 1;
+                    slot.color = new Color((255f/255f), (181f/255f), (224f/255f));
+                    PuzzleTilesList.Add(tileInstance);
                 }
                 var instanceRectTransform = tileInstance.GetComponent<RectTransform>();
                 instanceRectTransform.anchoredPosition3D = new Vector3(x*150-_width*56.5f, y*150-_height*10);
                 TilesList.Add(tileInstance);
             }
+        }
+    }
+    public void CheckIfWin()
+    {
+        var numberOfCompletedTiles = 0;
+        foreach(var tile in PuzzleTilesList)
+        {
+            var tileB = tile.GetComponent<TileBehaviour>();
+            if (tileB.HasBeenOccupied)
+            {
+                numberOfCompletedTiles += 1;
+            }
+        }
+        if (numberOfCompletedTiles == PuzzleTilesList.Count)
+        {
+            WinMenu.SetActive(true);
         }
     }
 
