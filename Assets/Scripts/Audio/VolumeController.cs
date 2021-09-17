@@ -26,6 +26,10 @@ public class VolumeController : MonoBehaviour
 
     public void SetSoundEffectsVolume(float value)
     {
+        SoundEffectsSlider.onValueChanged.AddListener(delegate
+        {
+            audioManager.PlaySound("ButtonSound");
+        });
         if (audioManager != null)
         {
             foreach(var sound in audioManager.Sounds)

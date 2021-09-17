@@ -20,6 +20,8 @@ public class TileBehaviour : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
             eventData.pointerDrag.transform.SetParent(transform);
             eventData.pointerDrag.transform.position = transform.position;
             var gridB = GameObject.FindObjectOfType<GridBehaviour>();
+            var audio = GameObject.FindObjectOfType<AudioManager>();
+            audio.PlaySound("ButtonSound");
             gridB.CheckIfWin();
         }
         else

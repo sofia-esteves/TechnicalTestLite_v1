@@ -8,6 +8,7 @@ public class BackgroundBehaviour : MonoBehaviour, IDropHandler, IPointerEnterHan
 {
     public void OnDrop(PointerEventData eventData)
     {
+        Handheld.Vibrate();
         var piecesPanel = GameObject.FindObjectOfType<PuzzlePiecesPanelManager>().transform;
         eventData.pointerDrag.transform.SetParent(piecesPanel);
     }
