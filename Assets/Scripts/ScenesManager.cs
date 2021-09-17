@@ -25,4 +25,24 @@ public class ScenesManager : MonoBehaviour
         levelManager.LevelsInfo.Remove(currentLevel+1);
         levelManager.LevelsInfo.Add(currentLevel+1, false);
     } 
+    public LevelsEnum GetCurrentLevel()
+    {
+        var index = SceneManager.GetActiveScene().buildIndex;
+        if (index == 0)
+        {
+            return LevelsEnum.Main;
+        }
+        else if(index == 1)
+        {
+            return LevelsEnum.FirstLevel;
+        }
+        else if (index == 2)
+        {
+            return LevelsEnum.SecondLevel;
+        }
+        else
+        {
+            return LevelsEnum.ThirdLevel;
+        }
+    }
 }

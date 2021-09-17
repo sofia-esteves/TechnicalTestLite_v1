@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using Assets.Scripts.Levels;
 
 public class GridBehaviour : MonoBehaviour
 {
@@ -11,8 +12,6 @@ public class GridBehaviour : MonoBehaviour
 
     [SerializeField]
     private GameObject _tilesContent;
-    [SerializeField]
-    private Sprite _sprite;
     [SerializeField]
     private GameObject _tilePrefab;
     public List<GameObject> TilesList;
@@ -28,7 +27,7 @@ public class GridBehaviour : MonoBehaviour
     void GenerateGrid()
     {
         var totalOfTiles = _width * _height;
-        var numberOfPuzzleSlots = (int)totalOfTiles / 3;
+        var numberOfPuzzleSlots = (int)totalOfTiles / 2;
        
         while (PuzzleSlots.Count < numberOfPuzzleSlots)
         {
@@ -82,9 +81,20 @@ public class GridBehaviour : MonoBehaviour
                 if (isPuzzlePieceSlot)
                 {
                     var slot = tileInstance.AddComponent<Image>();
-                    var pink = new Color(255, 181, 224);
-                    pink.a = 1;
-                    slot.color = new Color((255f/255f), (181f/255f), (224f/255f));
+                    var sceneManager = GameObject.FindObjectOfType<ScenesManager>();
+                    var level = sceneManager.GetCurrentLevel();
+                    if (level == LevelsEnum.FirstLevel)
+                    {
+                        slot.color = new Color((255f / 255f), (181f / 255f), (224f / 255f));
+                    }
+                    else if (level == LevelsEnum.SecondLevel)
+                    {
+                        slot.color = new Color((145f / 255f), (145f / 255f), (145f / 255f));
+                    }
+                    else if (level == LevelsEnum.ThirdLevel)
+                    {
+                        slot.color = new Color((100f / 255f), (75f / 255f), (100f / 255f));
+                    }
                     PuzzleTilesList.Add(tileInstance);
                 }
                 var instanceRectTransform = tileInstance.GetComponent<RectTransform>();

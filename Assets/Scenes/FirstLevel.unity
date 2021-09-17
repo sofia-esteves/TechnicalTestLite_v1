@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 150, y: 150}
+  m_CellSize: {x: 155, y: 155}
   m_Spacing: {x: 1, y: 1}
   m_Constraint: 1
   m_ConstraintCount: 5
@@ -1300,7 +1300,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tilesContent: {fileID: 172520306}
-  _sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   _tilePrefab: {fileID: 5523691984953862911, guid: 3de88c0c5864435419e11a6539d9e101,
     type: 3}
   TilesList: []
