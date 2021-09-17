@@ -19,6 +19,7 @@ public class TileBehaviour : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
             HasBeenOccupied = true;
             eventData.pointerDrag.transform.SetParent(transform);
             eventData.pointerDrag.transform.position = transform.position;
+            eventData.pointerDrag.GetComponent<ButtonBehaviour>().enabled = false;
             var gridB = GameObject.FindObjectOfType<GridBehaviour>();
             var audio = GameObject.FindObjectOfType<AudioManager>();
             audio.PlaySound("ButtonSound");

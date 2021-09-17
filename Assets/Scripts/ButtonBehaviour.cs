@@ -32,7 +32,7 @@ namespace Assets.Scripts
 
         public void OnEndDrag(PointerEventData eventData)
         {
-
+            var tiles = GameObject.FindObjectOfType<TileBehaviour>();
             if(transform.parent == parentTransform.parent)
             {
                 transform.SetParent(parentTransform);
