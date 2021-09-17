@@ -20,7 +20,6 @@ public class StartButtonBehaviour : MonoBehaviour
         gameObject.GetComponent<Button>().onClick.AddListener(delegate() 
         {
             audioManager.PlaySound("StartSound");
-            levelManager.CheckAndSetButtons();
         }); 
         
     }
