@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    public bool ShowLevels=false;
     public static LevelManager instance;
     private LevelButtons LevelButtonsClass;
     private Button[] LevelButtons;

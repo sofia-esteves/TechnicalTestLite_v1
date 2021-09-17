@@ -248,6 +248,7 @@ RectTransform:
   - {fileID: 6699827662752510252}
   - {fileID: 1230227629580317565}
   - {fileID: 2981131287801667832}
+  - {fileID: 2981131289560087375}
   - {fileID: 3598003854189058560}
   - {fileID: 6149932829597466973}
   m_Father: {fileID: 0}
@@ -570,6 +571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26e14657544885428d0c8c1102c5ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NextLevelButton: {fileID: 2981131289560087372}
 --- !u!224 &2073343738
 RectTransform:
   m_ObjectHideFlags: 0
@@ -812,7 +814,6 @@ RectTransform:
   - {fileID: 2981131289464933466}
   - {fileID: 2981131287705071346}
   - {fileID: 2981131289447551960}
-  - {fileID: 2981131289560087375}
   m_Father: {fileID: 47776563}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1284,8 +1285,8 @@ RectTransform:
   m_Children:
   - {fileID: 2981131289120660406}
   - {fileID: 2981131288308401128}
-  m_Father: {fileID: 2981131287801667832}
-  m_RootOrder: 3
+  m_Father: {fileID: 47776563}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1304,7 +1305,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 47776563}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1529,7 +1530,7 @@ RectTransform:
   - {fileID: 6149932829356976032}
   - {fileID: 6149932830135048046}
   m_Father: {fileID: 47776563}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1736,6 +1737,7 @@ MonoBehaviour:
   PuzzleTilesList: []
   Pieces: {fileID: 1230227629580317566}
   WinMenu: {fileID: 2981131287801667833}
+  NextLevel: {fileID: 2981131289560087372}
 --- !u!224 &6699827662752510252
 RectTransform:
   m_ObjectHideFlags: 0

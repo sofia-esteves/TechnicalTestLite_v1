@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using Assets.Scripts.Levels;
+using UnityEngine.SceneManagement;
 
 public class GridBehaviour : MonoBehaviour
 {
@@ -19,10 +20,25 @@ public class GridBehaviour : MonoBehaviour
     public List<(int, int)> PuzzleSlots = new List<(int, int)>();
     public GameObject Pieces;
     public GameObject WinMenu;
+    public GameObject NextLevel;
     private void Start()
     {
         GenerateGrid();
         Pieces.SetActive(true);
+
+        var level = GameObject.FindObjectOfType<LevelManager>();
+        if (SceneManager.GetActiveScene().buildIndex < 3)
+        {
+            level.LevelsInfo.TryGetValue(SceneManager.GetActiveScene().buildIndex + 1, out bool isBlocked);
+            if (!isBlocked)
+            {
+                NextLevel.SetActive(true);
+            }
+        }
+        else
+        {
+            NextLevel.SetActive(true);
+        }
     }
     void GenerateGrid()
     {
@@ -117,6 +133,10 @@ public class GridBehaviour : MonoBehaviour
         if (numberOfCompletedTiles == PuzzleTilesList.Count)
         {
             WinMenu.SetActive(true);
+            if(!NextLevel.activeInHierarchy)
+            {
+                NextLevel.SetActive(true);
+            }
             GameObject.FindObjectOfType<AudioManager>().PlaySound("Win");
         }
     }

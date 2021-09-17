@@ -9,7 +9,7 @@ public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerDownHand
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Handheld.Vibrate();
+        //Handheld.Vibrate();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

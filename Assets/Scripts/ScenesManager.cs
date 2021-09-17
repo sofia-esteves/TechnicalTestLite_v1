@@ -6,17 +6,41 @@ using UnityEngine.SceneManagement;
 
 public class ScenesManager : MonoBehaviour
 {
+    public GameObject NextLevelButton;
+    private void Start()
+    {
+        var currentLevel = SceneManager.GetActiveScene().buildIndex;
+        var levelManager = GameObject.FindObjectOfType<LevelManager>();
+        if (currentLevel == 0)
+        {
+            levelManager.CheckAndSetButtons();
+
+        }
+
+        levelManager.LevelsInfo.TryGetValue(currentLevel, out bool islocked);
+        if (islocked)
+        {
+            NextLevelButton.SetActive(true);
+        }
+
+    }
     public void GoToLevel(int level)
     {
         SceneManager.LoadScene(level);
+        var levelManager = GameObject.FindObjectOfType<LevelManager>();
+        levelManager.ShowLevels = true;
     }
     public void GoToNextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        var levelManager = GameObject.FindObjectOfType<LevelManager>();
+        levelManager.ShowLevels = true;
     }
     public void GoToPreviousLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        var levelManager = GameObject.FindObjectOfType<LevelManager>();
+        levelManager.ShowLevels = true;
     }
     public void UnlockNextLevel()
     {
