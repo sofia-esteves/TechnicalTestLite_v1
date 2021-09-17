@@ -26,6 +26,7 @@ public class TileBehaviour : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
         }
         else
         {
+            Handheld.Vibrate();
             var piecesPanel = GameObject.FindObjectOfType<PuzzlePiecesPanelManager>().transform;
             eventData.pointerDrag.transform.SetParent(piecesPanel);
         }

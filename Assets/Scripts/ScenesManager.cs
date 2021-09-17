@@ -46,9 +46,9 @@ public class ScenesManager : MonoBehaviour
     {
         var currentLevel = SceneManager.GetActiveScene().buildIndex;
         var levelManager = GameObject.FindObjectOfType<LevelManager>();
-        levelManager.LevelsInfo.Remove(currentLevel+1);
-        levelManager.LevelsInfo.Add(currentLevel+1, false);
-    } 
+        levelManager.LevelsInfo.Remove(currentLevel + 1);
+        levelManager.LevelsInfo.Add(currentLevel + 1, false);
+    }
     public LevelsEnum GetCurrentLevel()
     {
         var index = SceneManager.GetActiveScene().buildIndex;
@@ -56,7 +56,7 @@ public class ScenesManager : MonoBehaviour
         {
             return LevelsEnum.Main;
         }
-        else if(index == 1)
+        else if (index == 1)
         {
             return LevelsEnum.FirstLevel;
         }
@@ -69,4 +69,5 @@ public class ScenesManager : MonoBehaviour
             return LevelsEnum.ThirdLevel;
         }
     }
+   
 }

@@ -1632,7 +1632,6 @@ GameObject:
   - component: {fileID: 8636144158356310481}
   - component: {fileID: 8636144158356310318}
   - component: {fileID: 8636144158356310319}
-  - component: {fileID: 8636144158356310480}
   m_Layer: 5
   m_Name: PreviousLevelButton
   m_TagString: Untagged
@@ -1723,18 +1722,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8636144158356310480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8636144158356310317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c8d7466c3347a4895ac63f1b41c03d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &8636144158356310481
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2006,7 +1993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.7946295, g: 0.98039216, b: 0.7176471, a: 0.9019608}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

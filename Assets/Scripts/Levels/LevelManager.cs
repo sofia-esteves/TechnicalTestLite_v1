@@ -27,7 +27,16 @@ public class LevelManager : MonoBehaviour
         LevelButtonsClass = GameObject.FindObjectOfType<LevelButtons>();
         LevelButtons = LevelButtonsClass.LevelButtonsArray;
     }
-
+    private void Update()
+    {
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
+        }
+    }
     public void CheckAndSetButtons()
     {
         LevelButtonsClass = GameObject.FindObjectOfType<LevelButtons>();

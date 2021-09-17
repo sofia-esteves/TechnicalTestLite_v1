@@ -668,26 +668,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6567864309907041612, guid: d5d760bc54c6f8346adc799a67666cd4, type: 3}
   PuzzlePieces:
-  - {fileID: 21300000, guid: 312949f3b051d6e4f8dbeb7cb1116f97, type: 3}
-  - {fileID: 21300000, guid: 06bae82425223c44cbd4e577b1bcf48d, type: 3}
-  - {fileID: 21300000, guid: 62292cca5f77edc49994beb52d018863, type: 3}
-  - {fileID: 21300000, guid: 952e64353920f5240a9487a751bcc462, type: 3}
-  - {fileID: 21300000, guid: 2f33eea75a464fc449ffb0645d04800c, type: 3}
-  - {fileID: 21300000, guid: f33715f681aff6640b03fe123b2747ca, type: 3}
-  - {fileID: 21300000, guid: 3f4dacf264c0d734c9a42fb0f3be5e38, type: 3}
-  - {fileID: 21300000, guid: 7200d9444ed845142ab425ea8cce0e1e, type: 3}
-  - {fileID: 21300000, guid: 3b76cf66fffb41543aee1f7663ae6daa, type: 3}
-  - {fileID: 21300000, guid: 5efed7e1415e3af4ba0c8344bd143146, type: 3}
-  - {fileID: 21300000, guid: 63ff0e561fb23a34bb5bd0fbba3d7a15, type: 3}
-  - {fileID: 21300000, guid: 4051e2f227277f84ea578552fa29f9a1, type: 3}
-  - {fileID: 21300000, guid: fed70aa56c2d2ba449a925c1b56716d8, type: 3}
-  - {fileID: 21300000, guid: 3808ad27b7847fb4cbfe485b1e07b6f6, type: 3}
-  - {fileID: 21300000, guid: 2494205ecbcba8340a3678259ab0ba8e, type: 3}
-  - {fileID: 21300000, guid: adfc156f84e566043a17ae6a7bfc82d3, type: 3}
-  - {fileID: 21300000, guid: 28db296695afcb54aaffd7215ea11c81, type: 3}
-  - {fileID: 21300000, guid: 57f8f80194930db4991d9a0e9f02fa0e, type: 3}
-  - {fileID: 21300000, guid: c224f6ec435e86048b7b6976d70260ab, type: 3}
-  - {fileID: 21300000, guid: aeded1b3ae5ac004997235bdb9b6a941, type: 3}
+  - {fileID: 21300000, guid: 41346ce492d9e4c488733289837e3835, type: 3}
+  - {fileID: 21300000, guid: e597dad485fee3d49a39f593b21b1dda, type: 3}
+  - {fileID: 21300000, guid: f64b5f458c9560942ab1db7815d8b830, type: 3}
+  - {fileID: 21300000, guid: 8ce849d8696aa9b4f8b4f4103be3afa0, type: 3}
+  - {fileID: 21300000, guid: d72395038b73ea04983043b2587c0ec0, type: 3}
+  - {fileID: 21300000, guid: 5952862fc28a7584eb63eaca1d964006, type: 3}
+  - {fileID: 21300000, guid: 3fbefb28c6b8be54583c7b151b336401, type: 3}
+  - {fileID: 21300000, guid: 931c4fa63abe4f544862e8bcf3647409, type: 3}
+  - {fileID: 21300000, guid: ca53e68f1a7f9dc4ba7a69d5c88fa102, type: 3}
+  - {fileID: 21300000, guid: f53a9b4667b36774aaa3bfcc545e7630, type: 3}
+  - {fileID: 21300000, guid: 3078a76f336fb85408b806fbe69176c2, type: 3}
+  - {fileID: 21300000, guid: 948fb31a8b96d824cb817e7c65987554, type: 3}
+  - {fileID: 21300000, guid: fb160d70cbe4893448dee434239e12f2, type: 3}
+  - {fileID: 21300000, guid: 932c4ecec2182b84caf65ddfefd11b00, type: 3}
+  - {fileID: 21300000, guid: a6ddd67d952066849b913dda70df4208, type: 3}
+  - {fileID: 21300000, guid: 28b7a4626bee6c24aaa50c3e6e65a778, type: 3}
+  - {fileID: 21300000, guid: 196c60ad6cccb444b8c5a5faf9ff7479, type: 3}
+  - {fileID: 21300000, guid: b1cb68c8ece402a4283b3d370408b300, type: 3}
+  - {fileID: 21300000, guid: 011e0291341d1f5499f765d359d5a72c, type: 3}
+  - {fileID: 21300000, guid: 8bab4596a003e174dba3c7442980cf09, type: 3}
   Grid: {fileID: 6699827662752510253}
 --- !u!222 &1230227629580317570
 CanvasRenderer:
@@ -710,7 +710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.9811321, g: 0.71733713, b: 0.9219379, a: 0.9019608}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1508,7 +1508,6 @@ GameObject:
   - component: {fileID: 6149932829597467040}
   - component: {fileID: 6149932829597466975}
   - component: {fileID: 6149932829597466974}
-  - component: {fileID: 6149932829597467041}
   m_Layer: 5
   m_Name: PreviousLevelButton
   m_TagString: Untagged
@@ -1628,18 +1627,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6149932829597466972}
   m_CullTransparentMesh: 0
---- !u!114 &6149932829597467041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6149932829597466972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c8d7466c3347a4895ac63f1b41c03d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6149932830135048045
 GameObject:
   m_ObjectHideFlags: 0
