@@ -133,6 +133,7 @@ public class GridBehaviour : MonoBehaviour
         if (numberOfCompletedTiles == PuzzleTilesList.Count)
         {
             WinMenu.SetActive(true);
+            GameObject.FindObjectOfType<ScenesManager>().UnlockNextLevel();
             if(!NextLevel.activeInHierarchy)
             {
                 NextLevel.SetActive(true);
