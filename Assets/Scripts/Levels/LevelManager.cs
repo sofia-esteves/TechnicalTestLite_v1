@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Levels;
+﻿using Assets.Scripts.Data;
+using Assets.Scripts.Levels;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,11 +11,18 @@ public class LevelManager : MonoBehaviour
     public static LevelManager instance;
     private LevelButtons LevelButtonsClass;
     private Button[] LevelButtons;
+
+    LevelProgress LevelProgress = new LevelProgress();
     [HideInInspector]
     public Dictionary<int, bool> LevelsInfo = new Dictionary<int, bool>();
     private void Awake()
     {
-
+        SaveLoad.Load();
+        var data = SaveLoad.savedProgress;
+        if (data != null)
+        {
+            LevelsInfo = data.LevelsInfo;
+        }
         if (instance != null)
         {
             Destroy(gameObject);
@@ -69,5 +77,7 @@ public class LevelManager : MonoBehaviour
                 }
             }
         }
+        LevelProgress.LevelsInfo = LevelsInfo;
+        LevelProgress.Current = LevelProgress;
     }
 }

@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Levels;
+﻿using Assets.Scripts.Data;
+using Assets.Scripts.Levels;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -45,5 +46,8 @@ public class EnvironmentBehaviour : MonoBehaviour
                 data.Level.IsBlocked = true;
             }
         }
+        SaveLoad.savedProgress = new LevelProgress();
+        SaveLoad.Save();
+        GameObject.FindObjectOfType<LevelManager>().CheckAndSetButtons();
     }
 }

@@ -48,6 +48,7 @@ public class ScenesManager : MonoBehaviour
         var levelManager = GameObject.FindObjectOfType<LevelManager>();
         levelManager.LevelsInfo.Remove(currentLevel + 1);
         levelManager.LevelsInfo.Add(currentLevel + 1, false);
+        SaveLoad.Save();
     }
     public LevelsEnum GetCurrentLevel()
     {
