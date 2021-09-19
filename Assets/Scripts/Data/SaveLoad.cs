@@ -29,4 +29,12 @@ public static class SaveLoad
             file.Close();
         }
     }
+
+    public static void Clear()
+    {
+        if(File.Exists(Application.persistentDataPath + "/savedProgress.gd"))
+        {
+            File.Delete(Application.persistentDataPath + "/savedProgress.gd");
+        }
+    }
 }

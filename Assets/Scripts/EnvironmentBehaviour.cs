@@ -46,8 +46,7 @@ public class EnvironmentBehaviour : MonoBehaviour
                 data.Level.IsBlocked = true;
             }
         }
-        SaveLoad.savedProgress = new LevelProgress();
-        SaveLoad.Save();
+        SaveLoad.Clear();
         GameObject.FindObjectOfType<LevelManager>().CheckAndSetButtons();
     }
 }
