@@ -8,6 +8,9 @@ namespace Assets.Scripts.Levels
 {
     public enum LevelsEnum
     {
+        /// <summary>
+        /// Enum with levels available
+        /// </summary>
         Main,
         FirstLevel,
         SecondLevel,

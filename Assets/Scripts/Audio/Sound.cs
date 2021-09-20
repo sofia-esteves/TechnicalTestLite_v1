@@ -6,6 +6,9 @@ using UnityEngine.Audio;
 [System.Serializable]
 public class Sound
 {
+    /// <summary>
+    /// Simple class with sound properties
+    /// </summary>
     [HideInInspector]
     public AudioSource AudioSource;
     public string Name;

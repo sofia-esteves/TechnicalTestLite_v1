@@ -7,6 +7,10 @@ using Assets.Scripts.Data;
 
 public static class SaveLoad 
 {
+    /// <summary>
+    /// Static class, with Save, Load and Clear Methods.
+    /// Converts game data to a format that can be saved and later restored
+    /// </summary>
     public static LevelProgress savedProgress = new LevelProgress();
 
     public static void Save()

@@ -8,6 +8,11 @@ namespace Assets.Scripts
 {
     public class PuzzlePiecesPanelManager : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
     {
+        /// <summary>
+        /// MonoBehaviour to be associated with the puzzle pieces panel
+        /// Instaciates the Puzzle pieces prefab
+        /// Actions to happen on drop
+        /// </summary>
         [SerializeField]
         private GameObject prefab;
         [SerializeField]

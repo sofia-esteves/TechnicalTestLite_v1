@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class StartButtonBehaviour : MonoBehaviour
 {
+    /// <summary>
+    /// MonoBehaviour associated to Start button on the main scene
+    /// </summary>
     private AudioManager audioManager;
     private LevelManager levelManager;
     public GameObject LevelsMenu;

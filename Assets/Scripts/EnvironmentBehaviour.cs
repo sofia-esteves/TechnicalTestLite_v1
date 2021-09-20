@@ -6,6 +6,11 @@ using UnityEngine;
 
 public class EnvironmentBehaviour : MonoBehaviour
 {
+    /// <summary>
+    /// MonoBehaviour class used in the main scene
+    /// Has ChangeMenuAfterAnimation, WaitAndChangeMenu and ClearData methods
+    /// Also inicializes the theme sound
+    /// </summary>
     [SerializeField]
     private GameObject _levelMenu;
     public GameObject AudioManager;

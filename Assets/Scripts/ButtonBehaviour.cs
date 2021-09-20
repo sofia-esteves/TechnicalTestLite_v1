@@ -7,6 +7,11 @@ namespace Assets.Scripts
 {
     public class ButtonBehaviour : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
+        /// <summary>
+        /// Puzzle Pieces button behaviour
+        /// Actions to be performed on Drag
+        /// </summary>
+
         Transform parentTransform = null;
         public void OnPointerDown(PointerEventData eventData)
         {

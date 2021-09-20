@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class VolumeController : MonoBehaviour
 {
+    /// <summary>
+    /// Volume Controller is associated to the Volume settings menu.
+    /// Has the two sliders that controll the main theme and sound effects.
+    /// Has methods Set Theme Volume and Set Sound Effects Volume, that are linked to the sliders
+    /// </summary>
     private AudioManager audioManager;
     public Slider ThemeSlider;
     public Slider SoundEffectsSlider;

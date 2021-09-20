@@ -8,6 +8,11 @@ using UnityEngine.SceneManagement;
 
 public class GridBehaviour : MonoBehaviour
 {
+    /// <summary>
+    /// Creates the puzzle grid with method GenerateGrid, puzzle size can be altered(puzzle piece sizing has to be adapted)
+    /// as well as number of puzzle slots that are empty (difficulty can be changed)
+    /// Method CheckIfWin called eveytime a puzzle piece is placed on the right slot, checks if puzzle is complete
+    /// </summary>
     private int _width = 4;   
     private int _height =5;
 

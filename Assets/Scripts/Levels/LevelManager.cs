@@ -7,6 +7,13 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    /// <summary>
+    /// Manages Level data and presentation
+    /// Gets the data stored from the Save Load class
+    /// Has method Check and Set Buttons, called every time the Levels Menu is oppened or has changes
+    /// Is not destroyed from scene to scene
+    /// </summary>
+
     public bool ShowLevels=false;
     public static LevelManager instance;
     private LevelButtons LevelButtonsClass;

@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class TileBehaviour : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    /// <summary>
+    /// MonoBehaviour associated to the tiles on the puzzle grid
+    /// Actions to happen on drop
+    /// </summary>
     public bool HasBeenOccupied;
     public int X;
     public int Y;

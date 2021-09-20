@@ -6,6 +6,11 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
+    /// <summary>
+    /// Audio Manager keeps an array of sounds and method Play Sound.
+    /// Manages the Audio Manager instance.
+    /// Class is not destroyed when going to a different scene.
+    /// </summary>
     public Sound[] Sounds;
     public static AudioManager instance;
     private void Awake()

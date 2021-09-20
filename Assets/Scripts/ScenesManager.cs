@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class ScenesManager : MonoBehaviour
 {
+    /// <summary>
+    /// Multiple methods related to game levels
+    /// </summary>
     public GameObject NextLevelButton;
     private void Start()
     {
